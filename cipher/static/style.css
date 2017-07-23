@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans");
+
+body {
+  background: #002b36;
+  font: 14px "Open Sans", sans-serif;
+  color: #839496;
+  font-weight: 400;
+}
+
+code {
+  font: 14px "Inconsolata", monospace;
+  color: #657b83;
+  white-space: pre;
+}
+
+input {
+  background: #002b36;
+  font: 14px "Open Sans", sans-serif;
+  color: #839496;
+  font-weight: 800;
+  border: 1px solid #657b83;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input[type=text] {
+  font: 14px "Inconsolata", monospace;
+  width: 80%;
+}
+
+input[type=submit]:hover {
+  background: #073642;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 50% 50%;
+}
+
+.box {
+  padding: 20px;
+}
+
+@media print, screen and (max-width: 960px) {
+  .wrapper {
+    grid-template-columns: 100%;
+  }
+}

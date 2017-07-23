@@ -6,7 +6,8 @@ import string
 
 
 def shift_text(text, key):
-    """
+    """Shifts text as a Vigenère or Caesar cipher.
+
     Args:
         text (str): Input text.
         key (str): Vigenère cipher key or single letter for Caesar cipher key.
@@ -35,8 +36,9 @@ def shift_text(text, key):
     return text
 
 
-def main():
-    """
+def cli():
+    """Command-line interface for `cipher`.
+
     Args:
         None
 
@@ -58,7 +60,7 @@ def main():
         '-k',
         '--key',
         help='Key used for decryption/encryption.',
-        required=True
+        required=False
     )
     parser.add_argument(
         '-o',
@@ -76,7 +78,8 @@ def main():
     else:
         text = args.input
 
-    text = shift_text(text, args.key)
+    if args.key:
+        text = shift_text(text, args.key)
 
     if args.output:
         outfile = open(args.output, 'w')
@@ -88,4 +91,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    cli()
