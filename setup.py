@@ -11,7 +11,7 @@ requirements = [str(ir.req) for ir in install_requirements]
 
 setup(
     name='cipher',
-    version='0.0.0',
+    version='0.0.1',
     description='A simple cipher.',
     author='Mike Canoy',
     author_email='mike@mikecanoy.net',
